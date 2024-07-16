@@ -27,7 +27,12 @@ public class Main {
         Assert.assertEquals(0, resultado);
     }
     public int numero_letras_maiusculas(String nome){
-        int maiusculas = -1;
+        int maiusculas = 0;
+        for (char letra : nome.toCharArray()) {
+            if (Character.isUpperCase(letra)) {
+                maiusculas = maiusculas + 1;
+            }
+        }
         return maiusculas;
     }
 }
