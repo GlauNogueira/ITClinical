@@ -1,9 +1,12 @@
 import unittest
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+def numero_letras_maiusculas(texto):
+    maiusculas = 0
+    for letra in texto:
+        if letra.isupper():
+            maiusculas += 1
+    return maiusculas
 
 class TesteMaiusculas(unittest.TestCase):
     def teste_numero_maiusculas_nome(self):
